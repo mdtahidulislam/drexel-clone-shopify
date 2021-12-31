@@ -16,23 +16,25 @@
     {{ 'owl.carousel-v2.3.4.min.css' | asset_url | stylesheet_tag }}
     {{ 'owl.theme.default-v2.3.4.min.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
+    
+    <!-- page title -->
     <title>{{ page_title }}</title>
 
     <!-- load scripts from shopify -->
-    {{ content_for_header}}
+    {{ content_for_header }}
 </head>
 <body>
     <!-- main content -->
-    {% section 'header' %}
+    
     <main>
         <!-- dynamically output from all template  -->
-        {{content_for_layout}}
+        {{ content_for_layout }}
     </main>
 
     <!-- all js -->
-    <script src="../assets/jquery-v3.6.0.min.js"></script>
-    <script src="../assets/popper-v2.9.2.min.js"></script>
-    <script src="../assets/bootstrap-v5.0.2.min.js"></script>
-    <script src="../assets/main.js"></script>
+    <script src="{{ 'jquery-v3.6.0.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'popper-v2.9.2.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'bootstrap-v5.0.2.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'main.js' | asset_url }}" defer></script>
 </body>
 </html>
