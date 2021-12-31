@@ -5,3 +5,84 @@
     font-family: 'Oswald', sans-serif;
     font-family: 'Poppins', sans-serif;
 */
+:root {
+    /* color */
+    --theme-primary: #222222;
+    --theme-secondary: #888888;
+    --theme-secondary-light: #969696;
+
+    --theme-bg-superdark: #222222;
+    --theme-bg-dark: #BFBFBF;
+    --theme-bg-light: #dddddd;
+    --theme-bg-lighter: #eeeeee;
+
+    /* font family */
+    --theme-sans-serif: "Poppins","Oswald",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+
+    /* font size */
+    --theme-fs-xxs: 14px;
+    --theme-fs-xs: 16px;
+    --theme-fs-s: 18px;
+    --theme-fs-m: 22px;
+    --theme-fs-l: 24px;
+    --theme-fs-xl: 36px;
+}
+
+/* text color class */
+.text-primary {
+    color: var(--theme-primary);
+}
+.text-secondary {
+    color: var(--theme-secondary);
+}
+.text-secondary-light {
+    color: var(--theme-secondary-light);
+}
+/* background color class */
+.bg-superdark {
+    background: var(--theme-bg-dark);
+}
+.bg-dark {
+    background: var(--theme-bg-dark);
+}
+.bg-light {
+    background: var(--theme-bg-light);
+}
+.bg-lighter {
+    background: var(--theme-bg-lighter);
+}
+/* font size class */
+.text-fs-xxs {
+    font-size: var(--theme-fs-xxs);
+}
+.text-fs-xs {
+    font-size: var(--theme-fs-xs);
+}
+.text-fs-s {
+    font-size: var(--theme-fs-s);
+}
+.text-fs-m {
+    font-size: var(--theme-fs-m);
+}
+.text-fs-l {
+    font-size: var(--theme-fs-l);
+}
+.text-fs-xl {
+    font-size: var(--theme-fs-xl);
+}
+/* font weight class */
+.font-light {
+    font-weight: 300;
+}
+.font-regular {
+    font-weight: 400;
+}
+.font-medium {
+    font-weight: 500;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.font-bold {
+    font-weight: 700;
+}
