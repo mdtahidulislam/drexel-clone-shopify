@@ -17,7 +17,8 @@
     --theme-bg-lighter: #eeeeee;
 
     /* font family */
-    --theme-sans-serif: "Poppins","Oswald",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+    --theme-primary-font: "Poppins",sans-serif;
+    --theme-secondary-font: "Oswald",sans-serif;
 
     /* font size */
     --theme-fs-xxs: 14px;
@@ -27,7 +28,6 @@
     --theme-fs-l: 24px;
     --theme-fs-xl: 36px;
 }
-
 /* text color class */
 .text-primary {
     color: var(--theme-primary);
@@ -85,4 +85,7 @@
 }
 .font-bold {
     font-weight: 700;
+}
+body {
+    font-family: var(--theme-primary-font) !important;
 }
