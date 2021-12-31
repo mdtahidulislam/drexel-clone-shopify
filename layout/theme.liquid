@@ -10,11 +10,12 @@
 
     <!-- add favicon -->
 
-    <link rel="stylesheet" href="../assets/bootstrap-v5.0.2.min.css">
-    <link rel="stylesheet" href="../assets/fontawesome-v6.min.css">
-    <link rel="stylesheet" href="../assets/owl.carousel-v2.3.4.min.css">
-    <link rel="stylesheet" href="../assets/owl.theme.default-v2.3.4.min.css">
-    <link rel="stylesheet" href="../assets/style.css">
+    <!-- add css -->
+    {{ 'bootstrap-v5.0.2.min.css' | asset_url | stylesheet_tag }}
+    {{ 'fontawesome-v6.min.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.carousel-v2.3.4.min.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.theme.default-v2.3.4.min.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
     <title>{{ page_title }}</title>
 
     <!-- load scripts from shopify -->
