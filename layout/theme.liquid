@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- canonical url -->
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- add favicon -->
+
+    <link rel="stylesheet" href="../assets/bootstrap-v5.0.2.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome-v6.min.css">
+    <link rel="stylesheet" href="../assets/owl.carousel-v2.3.4.min.css">
+    <link rel="stylesheet" href="../assets/owl.theme.default-v2.3.4.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>{{ page_title }}</title>
+
+    <!-- load scripts from shopify -->
+    {{ content_for_header}}
+</head>
+<body>
+    <!-- main content -->
+    {% section 'header' %}
+    <main>
+        <!-- dynamically output from all template  -->
+        {{content_for_layout}}
+    </main>
+
+    <!-- all js -->
+    <script src="../assets/jquery-v3.6.0.min.js"></script>
+    <script src="../assets/popper-v2.9.2.min.js"></script>
+    <script src="../assets/bootstrap-v5.0.2.min.js"></script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>
