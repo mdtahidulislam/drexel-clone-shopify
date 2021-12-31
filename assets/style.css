@@ -1,10 +1,31 @@
-/* fonts */
+/*-----------------------------------------------------------------------------------
+
+    Template Name: DREXEL - eCommerce Bootstrap5 HTML5 Template
+    Template URI: site.com
+    Description: Fashion, apparel, sunglasses, accessories, mega store, watch, cosmetic, clothes, bag, bag store, fashion template, Multipurpose template, watch store
+    Author: Tahidul
+    Author URI: site.com
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default CSS	
+
+-----------------------------------------------------------------------------------*/
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* 
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Poppins', sans-serif;
-*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+/* css variable */
 :root {
     /* color */
     --theme-primary: #222222;
@@ -28,6 +49,124 @@
     --theme-fs-l: 24px;
     --theme-fs-xl: 36px;
 }
+body {
+    font-family: var(--theme-primary-font) !important;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+  line-height: inherit; }
+
+a,
+.btn {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: none; }
+
+a,
+button {
+  color: inherit;
+  outline: medium none; }
+
+button:focus, input:focus, input:focus, textarea, textarea:focus {
+  outline: 0;
+  border: 0; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0px;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+p {
+  font-family: var(--theme-primary-font);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+hr {
+  border-bottom: 1px solid #eceff8;
+  border-top: 0 none;
+  margin: 30px 0;
+  padding: 0; }
+
+label {
+  font-size: 14px;
+  font-weight: 400; }
+
+*::-moz-selection {
+  background: #ff5e14;
+  color: #ffffff;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: #ff5e14;
+  color: #ffffff;
+  text-shadow: none; }
+
+::selection {
+  background: #ff5e14;
+  color: #ffffff;
+  text-shadow: none; }
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+  color: #00235a;
+  font-size: 14px;
+  opacity: 1; }
+
+*::placeholder {
+  color: #00235a;
+  font-size: 14px;
+  opacity: 1; }
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+  overflow: hidden; }
+
+.clear {
+  clear: both; }
+
+.f-left {
+  float: left; }
+
+.f-right {
+  float: right; }
+
+.p-relative {
+  position: relative; }
+
+.p-absolute {
+  position: absolute; }
+
 /* text color class */
 .text-primary {
     color: var(--theme-primary);
@@ -85,7 +224,4 @@
 }
 .font-bold {
     font-weight: 700;
-}
-body {
-    font-family: var(--theme-primary-font) !important;
 }
