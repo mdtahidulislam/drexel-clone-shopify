@@ -39,6 +39,9 @@
     {{ content_for_header }}
 </head>
 <body class="template-{{ template | handleize }}" id="{{ page_title | handleize }}">
+
+    <!-- header -->
+    {% section 'header' %}
     <!-- main content -->
     
     <div class="wrapper">
