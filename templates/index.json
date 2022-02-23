@@ -1,12 +1,12 @@
 {
   "sections": {
-    "helloworld": {
-      "type": "hello",
+    "home": {
+      "type": "home",
       "settings": {
       }
     }
   },
   "order": [
-    "helloworld"
+    "home"
   ]
 }

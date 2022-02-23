@@ -38,13 +38,13 @@
     <!-- load scripts from shopify -->
     {{ content_for_header }}
 </head>
-<body class="{{ template | handleize }}" id="{{ page_title | handleize }}">
+<body class="template-{{ template | handleize }}" id="{{ page_title | handleize }}">
     <!-- main content -->
     
-    <main>
+    <div class="wrapper">
         <!-- dynamically output from all template  -->
         {{ content_for_layout }}
-    </main>
+    </div>
 
     <!-- all js -->
     <script src="{{ 'jquery-v3.6.0.min.js' | asset_url }}" defer></script>
