@@ -38,7 +38,7 @@
     <!-- load scripts from shopify -->
     {{ content_for_header }}
 </head>
-<body>
+<body class="{{ template | handleize }}" id="{{ page_title | handleize }}">
     <!-- main content -->
     
     <main>
