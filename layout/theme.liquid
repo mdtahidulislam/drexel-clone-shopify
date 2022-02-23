@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- canonical url -->
-    <link rel="canonical" href="{{ canonical_url }}">
-
     <!-- add favicon -->
 
     <!-- add css -->
@@ -17,8 +14,26 @@
     {{ 'owl.theme.default-v2.3.4.min.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
     
+    <!-- page SEO
+        * title tag
+        * meta description
+        * canonicalURL
+     -->
     <!-- page title -->
-    <title>{{ page_title }}</title>
+    <title>
+        {{ page_title -}}
+        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    <!-- meta description -->
+    {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}" />
+    {% endif %}
+
+    <!-- canonical url -->
+    <link rel="canonical" href="{{ canonical_url }}">
 
     <!-- load scripts from shopify -->
     {{ content_for_header }}
