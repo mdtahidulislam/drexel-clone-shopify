@@ -9,78 +9,22 @@
                   <nav class="header-menu">
                       <ul class="site-nav d-flex flex-wrap align-items-center">
                         {% for link in section.settings.header_left_menu.links %}
-                          <li class="menu-dropdown mega-menu">
-                            {% if link.links != blank %}
-                                <a href="{{link.url}}">{{link.title}}</a>
-                                <div class="sub-menu">
-                                  <div class="sub-menu-inner">
-                                      <div class="row">
-                                          <div class="col-md-9 col-sm-9">
-                                              <div class="row">
-                                                  <div class="col-sm-4">
-                                                      <div class="mega-col-inner">
-                                                          <div class="mega-menu-title">
-                                                              <a href="#">Furniture</a>
-                                                          </div>
-                                                          <div class="mega-menu-widget">
-                                                            {% for block in section.blocks %}
-                                                              <ul>
-                                                                  {% for childlink in block.settings.mega_cat.links %}
-                                                                    <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
-                                                                  {% endfor %}
-                                                              </ul>
-                                                            {% endfor %}
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-4">
-                                                      <div class="mega-col-inner">
-                                                          <div class="mega-menu-title">
-                                                              <a href="#">Furniture</a>
-                                                          </div>
-                                                          <div class="mega-menu-widget">
-                                                              <ul>
-                                                                  <li><a href="#">Furniture </a></li>
-                                                                  <li><a href="#">Furniture 2</a></li>
-                                                                  <li><a href="#">Furniture 3</a></li>
-                                                                  <li><a href="#">Furniture 4</a></li>
-                                                                  <li><a href="#">Furniture 5</a></li>
-                                                              </ul>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-sm-4">
-                                                      <div class="mega-col-inner">
-                                                          <div class="mega-menu-title">
-                                                              <a href="#">Furniture</a>
-                                                          </div>
-                                                          <div class="mega-menu-widget">
-                                                              <ul>
-                                                                  <li><a href="#">Furniture 1</a></li>
-                                                                  <li><a href="#">Furniture 2</a></li>
-                                                                  <li><a href="#">Furniture 3</a></li>
-                                                                  <li><a href="#">Furniture 4</a></li>
-                                                                  <li><a href="#">Furniture 5</a></li>
-                                                              </ul>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-md-3 col-sm-3">
-                                              <div class="mega-col-inner">
-                                                  <div class="box-image">
-                                                      <img src="./assets/images/mega_images_1.jpg" alt="Image" class="img-fluid">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                </div>
-                            {% else %}
-
-                            {% endif %}
+                          {% if link.links != blank %}
+                              <li class="{% if link.links != blank %}menu-dropdown{% endif %}">
+                                  <a href="{{ link.url }}" class="header-menu__link">{{ link.title }}</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            {% for childlink in link.links %}
+                                                <li><a href="{{ child.link }}">{{ childlink.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                              </li>
+                          {% else %}
+                          <li>
+                            <a href="{{ link.url }}" class="header-menu__link">{{ link.title }}</a>
                           </li>
+                          {% endif %}
                         {% endfor %}
                       </ul>
                   </nav>
@@ -202,13 +146,13 @@
     {
       "type": "link_list",
       "id": "header_left_menu",
-      "label": "Main Menu"
+      "label": "Header Left Menu"
     }
   ],
   "blocks": [
     {
-      "name": "Mega Menu",
-      "type": "Mega_Menu",
+      "name": "MegaMenu",
+      "type": "megamenu",
       "limit": 3,
       "settings": [
         {

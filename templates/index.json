@@ -1,13 +1,11 @@
 {
   "sections": {
-    "home": {
-      "type": "home",
-      "settings": {
-      }
+    "bannerSlideShow": {
+      "type": "bannerSlideShow"
     }
   },
   "order": [
-    "home"
+    "bannerSlideShow"
   ]
 }
 
