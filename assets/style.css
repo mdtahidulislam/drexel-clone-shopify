@@ -580,10 +580,15 @@ a.header-cart__mobile {
 }
 
 /* center des */
-.slide-des.text-center {
+.slide-des.text-bottom {
   left: 50%;
   bottom: 15%;
   transform: translate(-50%, 15%);
+}
+.slide-des.text-top {
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 5%);
 }
 
 .swiper-button-prev,

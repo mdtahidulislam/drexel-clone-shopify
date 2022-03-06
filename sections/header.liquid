@@ -21,8 +21,55 @@
                                     </div>
                               </li>
                           {% else %}
-                          <li>
+                          <li class="menu-dropdown {% if link.type == 'collections_link' %}mega-menu{% endif %}">
                             <a href="{{ link.url }}" class="header-menu__link">{{ link.title }}</a>
+                            {% if link.type == 'collections_link' %}
+                            <div class="sub-menu">
+                                <div class="sub-menu-inner">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="row">
+                                                {% for block in section.blocks %}
+                                                    {% assign num = 12 | divided_by: forloop.length %}
+                                                    {% case block.type %}
+                                                        {% when 'megamenu' %}
+                                                            <div class="col-sm-{{num}}">
+                                                                <div class="mega-col-inner">
+                                                                    <div class="mega-menu-title">
+                                                                        <span class="text-white">{{ block.settings.col-header }}</span>
+                                                                    </div>
+                                                                    <div class="mega-menu-widget">
+                                                                        <ul>
+                                                                            {% for link in block.settings.mega_cat.links %}
+                                                                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                                                            {% endfor %}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% when 'megamenuimg' %}
+                                                            <div class="col-sm-{{num}}">
+                                                                <div class="mega-col-inner">
+                                                                    <div class="box-image">
+                                                                        <img src="{{ block.settings.mega-img | img_url: 'large' }}" alt="Image" class="img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    {% endcase %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-3 col-sm-3">
+                                            <div class="mega-col-inner">
+                                                <div class="box-image">
+                                                    <img src="./assets/images/mega_images_1.jpg" alt="Image" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
                           </li>
                           {% endif %}
                         {% endfor %}
@@ -159,7 +206,25 @@
           "type": "link_list",
           "id": "mega_cat",
           "label": "Categories"
-        }
+        },
+       {
+           "type": "text",
+           "id": "col-header",
+           "label": "Category Header",
+           "default": "Category Header"
+       }
+      ]
+    },
+    {
+      "name": "MegaMenuImage",
+      "type": "megamenuimg",
+      "limit": 1,
+      "settings": [
+       {
+           "type": "image_picker",
+           "id": "mega-img",
+           "label": "Mega Image"
+       }
       ]
     }
   ]
