@@ -49,6 +49,9 @@
         {{ content_for_layout }}
     </div>
 
+    <!-- footer -->
+    {% section 'footer' %}
+
     <!-- all js -->
     <script src="{{ 'jquery-v3.6.0.min.js' | asset_url }}" defer></script>
     <script src="{{ 'popper-v2.9.2.min.js' | asset_url }}" defer></script>

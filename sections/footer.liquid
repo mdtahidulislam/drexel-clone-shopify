@@ -1,0 +1,64 @@
+<!-- footer -->
+<footer class="typo-footer footer-layout-1">
+    <div class="container">
+        <div class="footer-top"> 
+            <div class="row">
+                {% for block in section.blocks %}
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <h3 class="module-title text-primary text-fs-xs font-medium text-uppercase">{{ block.settings.header }}<i class="fa fa-angle-down accordion-show"></i></h3>
+                            <ul class="content">
+                                {% for link in block.settings.menu.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <address>© 2017 All rights reserved. Design by Typostores</address>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="footer-icon">
+                    <h5 class="text-secondary">Connect with us:</h5>
+                    <div class="footer-icon-share">
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-google-plus"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% schema %}
+{
+   "name": "Footer",
+  "max_blocks": 4,
+  "blocks": [
+    {
+       "type": "about",
+       "name": "Widget",
+       "limit": 4,
+      "settings": [
+        {
+           "type": "text",
+           "id": "header",
+           "label": "Widget Title",
+           "default": "Widget Title"
+        },
+        {
+           "type": "link_list",
+           "id": "menu",
+           "label": "Widget Links"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
