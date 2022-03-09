@@ -1,0 +1,41 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "73e449f7-9af0-4106-9ce3-d92da356737b": {
+            "type": "megamenu",
+            "settings": {
+              "mega_cat": "furniture",
+              "col-header": "Category Header"
+            }
+          },
+          "04923c0b-cb60-4fd4-8642-5b296843923d": {
+            "type": "megamenuimg",
+            "settings": {
+              "mega-img": "shopify:\/\/shop_images\/mega_images_1.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "73e449f7-9af0-4106-9ce3-d92da356737b",
+          "04923c0b-cb60-4fd4-8642-5b296843923d"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "alt": "",
+          "header_left_menu": "header-left-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
