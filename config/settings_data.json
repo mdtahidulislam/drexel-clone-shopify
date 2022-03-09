@@ -30,6 +30,18 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "feff091b-6048-45f8-b991-05cf6eaa2c87": {
+            "type": "about",
+            "settings": {
+              "header": "About",
+              "menu": "footer-about"
+            }
+          }
+        },
+        "block_order": [
+          "feff091b-6048-45f8-b991-05cf6eaa2c87"
+        ],
         "settings": {
         }
       }
