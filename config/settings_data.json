@@ -37,10 +37,34 @@
               "header": "About",
               "menu": "footer-about"
             }
+          },
+          "2e706da0-6154-4e07-8f15-912475722ac3": {
+            "type": "about",
+            "settings": {
+              "header": "CUSTOMER SERVICES",
+              "menu": "footer-about"
+            }
+          },
+          "07eb1423-77f2-4a76-bef6-40983ae7170a": {
+            "type": "about",
+            "settings": {
+              "header": "FURNITURE",
+              "menu": "footer-about"
+            }
+          },
+          "e898c390-d56a-4826-8984-7d357fb0bedb": {
+            "type": "about",
+            "settings": {
+              "header": "ACCESSORIES",
+              "menu": "footer-about"
+            }
           }
         },
         "block_order": [
-          "feff091b-6048-45f8-b991-05cf6eaa2c87"
+          "feff091b-6048-45f8-b991-05cf6eaa2c87",
+          "2e706da0-6154-4e07-8f15-912475722ac3",
+          "07eb1423-77f2-4a76-bef6-40983ae7170a",
+          "e898c390-d56a-4826-8984-7d357fb0bedb"
         ],
         "settings": {
         }
